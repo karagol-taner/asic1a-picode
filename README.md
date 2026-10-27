@@ -1,13 +1,5 @@
 # Position and charge change predict measured pH50 shifts in a pI-code ladder test of acid-sensing ion channel 1a
 
-**Taner Karagöl¹,³,\*,‡, Alper Karagöl²,³,\*,‡**
-
-¹ McGovern Institute for Brain Research, Massachusetts Institute of Technology, Cambridge, MA, USA
-² Department of Mechanical Engineering, Massachusetts Institute of Technology, Cambridge, MA, USA
-³ Istanbul University Istanbul Medical Faculty, Istanbul, Turkey
-\* These authors contributed equally
-‡ To whom correspondence should be addressed
-
 ---
 
 ## Abstract
@@ -53,7 +45,7 @@ Keywords: pH-responsive protein design, Substitution tolerance, Acid-sensing ion
 ├── structures/                      PROPKA output for the low-pH and resting assemblies
 ├── md/                              MD notebooks, CHARMM-GUI inputs, GROMACS parameters,
 │                                    and the per-frame analysis behind Figure S3
-├── figures/                         Figures 1-6 and S1-S3, PNG at 400 dpi and SVG
+├── figures/                         Figures 1-6 and S1-S3, PNG at 400 dpi
 └── supplementary/                   Supplementary Information and the data workbook
 ```
 
