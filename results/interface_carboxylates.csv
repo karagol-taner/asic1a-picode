@@ -1,0 +1,5 @@
+structure,chains,residues,carboxylates,monomer_tier0,assembly_tier0,added_tier0,interface_tier0,interface_positions
+9E4F,3,451,61,6,7,1,1,E242
+9E4A,3,451,61,1,1,0,0,
+6VTL,3,446,42,1,2,1,1,D433
+2QTS,3,420,59,5,7,2,1,E243

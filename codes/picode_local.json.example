@@ -1,0 +1,22 @@
+{
+  "_comment": [
+    "Local configuration for codes/picode_paths.py. Copy to picode_local.json",
+    "and fill in. It is gitignored, because it names working directories on one",
+    "machine and nothing in it is needed to reproduce the paper.",
+    "",
+    "Only the two scripts that execute the unpublished pI-code scoring code need",
+    "this file: codes/extract_edge_costs.py and codes/asic_edge_vs_cost.py.",
+    "Every other script resolves the ladder edges, the residue charges and the",
+    "burial thresholds from data/ladder_definition.json and",
+    "data/burial_thresholds.json, which are committed, so a clone runs without",
+    "this file and without those folders.",
+    "",
+    "path   relative to an ancestor of the project root, or absolute.",
+    "marker a file that must exist inside the folder for it to be accepted.",
+    "search_parents  optional intermediate folders to try under each ancestor."
+  ],
+  "search_parents": [""],
+  "method":  {"path": "/absolute/or/relative/path/to/method/folder", "marker": "a-file-inside-it"},
+  "memctrl": {"path": "/path/to/the/folder/holding/data/humsavar.txt", "marker": "data/humsavar.txt"},
+  "lpo":     {"path": "/path/to/the/folder/holding/the/burial/script", "marker": "the-burial-script.py"}
+}

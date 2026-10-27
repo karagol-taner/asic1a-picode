@@ -1,0 +1,707 @@
+ID   ASIC1_HUMAN             Reviewed;         528 AA.
+AC   P78348; A3KN86; E5KBL7; P78349; Q96CV2;
+DT   05-DEC-2001, integrated into UniProtKB/Swiss-Prot.
+DT   18-MAY-2010, sequence version 3.
+DT   02-SEP-2026, entry version 209.
+DE   RecName: Full=Acid-sensing ion channel 1 {ECO:0000303|PubMed:10798398};
+DE            Short=ASIC1 {ECO:0000303|PubMed:10798398};
+DE   AltName: Full=Amiloride-sensitive cation channel 2, neuronal {ECO:0000303|PubMed:21036899, ECO:0000312|HGNC:HGNC:100};
+DE   AltName: Full=Brain sodium channel 2 {ECO:0000303|PubMed:9037075};
+GN   Name=ASIC1 {ECO:0000312|HGNC:HGNC:100};
+GN   Synonyms=ACCN2 {ECO:0000303|PubMed:21036899,
+GN   ECO:0000312|HGNC:HGNC:100}, BNAC2 {ECO:0000303|PubMed:9037075};
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORMS 1 AND ASIC1A), AND TISSUE SPECIFICITY.
+RC   TISSUE=Brain;
+RX   PubMed=9037075; DOI=10.1073/pnas.94.4.1459;
+RA   Garcia-Anoveros J., Derfler B.H., Neville-Golden J., Hyman B.T.,
+RA   Corey D.P.;
+RT   "BNaC1 and BNaC2 constitute a new family of human neuronal sodium channels
+RT   related to degenerins and epithelial sodium channels.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 94:1459-1464(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM ASIC1B), FUNCTION (ISOFORMS 1; ASIC1A
+RP   AND ASIC1B), TRANSPORTER ACTIVITY, ACTIVITY REGULATION, AND SUBCELLULAR
+RP   LOCATION.
+RC   TISSUE=Spinal ganglion;
+RX   PubMed=21036899; DOI=10.1074/jbc.m110.171330;
+RA   Hoagland E.N., Sherwood T.W., Lee K.G., Walker C.J., Askwith C.C.;
+RT   "Identification of a calcium permeable human acid-sensing ion channel 1
+RT   transcript variant.";
+RL   J. Biol. Chem. 285:41852-41862(2010).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA] (ISOFORM 1).
+RA   Huque T., Cao J., Lischka F.W., Spielman A.I., Feldman R.S., Cowart B.J.,
+RA   Wise P.M., Pribitkin E.A., Mackler S.A., Brand J.G.;
+RT   "Acid sensing ion channels in human taste tissue.";
+RL   Submitted (AUG-2007) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=16541075; DOI=10.1038/nature04569;
+RA   Scherer S.E., Muzny D.M., Buhay C.J., Chen R., Cree A., Ding Y.,
+RA   Dugan-Rocha S., Gill R., Gunaratne P., Harris R.A., Hawes A.C.,
+RA   Hernandez J., Hodgson A.V., Hume J., Jackson A., Khan Z.M., Kovar-Smith C.,
+RA   Lewis L.R., Lozado R.J., Metzker M.L., Milosavljevic A., Miner G.R.,
+RA   Montgomery K.T., Morgan M.B., Nazareth L.V., Scott G., Sodergren E.,
+RA   Song X.-Z., Steffen D., Lovering R.C., Wheeler D.A., Worley K.C., Yuan Y.,
+RA   Zhang Z., Adams C.Q., Ansari-Lari M.A., Ayele M., Brown M.J., Chen G.,
+RA   Chen Z., Clerc-Blankenburg K.P., Davis C., Delgado O., Dinh H.H.,
+RA   Draper H., Gonzalez-Garay M.L., Havlak P., Jackson L.R., Jacob L.S.,
+RA   Kelly S.H., Li L., Li Z., Liu J., Liu W., Lu J., Maheshwari M.,
+RA   Nguyen B.-V., Okwuonu G.O., Pasternak S., Perez L.M., Plopper F.J.H.,
+RA   Santibanez J., Shen H., Tabor P.E., Verduzco D., Waldron L., Wang Q.,
+RA   Williams G.A., Zhang J., Zhou J., Allen C.C., Amin A.G., Anyalebechi V.,
+RA   Bailey M., Barbaria J.A., Bimage K.E., Bryant N.P., Burch P.E.,
+RA   Burkett C.E., Burrell K.L., Calderon E., Cardenas V., Carter K., Casias K.,
+RA   Cavazos I., Cavazos S.R., Ceasar H., Chacko J., Chan S.N., Chavez D.,
+RA   Christopoulos C., Chu J., Cockrell R., Cox C.D., Dang M., Dathorne S.R.,
+RA   David R., Davis C.M., Davy-Carroll L., Deshazo D.R., Donlin J.E.,
+RA   D'Souza L., Eaves K.A., Egan A., Emery-Cohen A.J., Escotto M., Flagg N.,
+RA   Forbes L.D., Gabisi A.M., Garza M., Hamilton C., Henderson N.,
+RA   Hernandez O., Hines S., Hogues M.E., Huang M., Idlebird D.G., Johnson R.,
+RA   Jolivet A., Jones S., Kagan R., King L.M., Leal B., Lebow H., Lee S.,
+RA   LeVan J.M., Lewis L.C., London P., Lorensuhewa L.M., Loulseged H.,
+RA   Lovett D.A., Lucier A., Lucier R.L., Ma J., Madu R.C., Mapua P.,
+RA   Martindale A.D., Martinez E., Massey E., Mawhiney S., Meador M.G.,
+RA   Mendez S., Mercado C., Mercado I.C., Merritt C.E., Miner Z.L., Minja E.,
+RA   Mitchell T., Mohabbat F., Mohabbat K., Montgomery B., Moore N., Morris S.,
+RA   Munidasa M., Ngo R.N., Nguyen N.B., Nickerson E., Nwaokelemeh O.O.,
+RA   Nwokenkwo S., Obregon M., Oguh M., Oragunye N., Oviedo R.J., Parish B.J.,
+RA   Parker D.N., Parrish J., Parks K.L., Paul H.A., Payton B.A., Perez A.,
+RA   Perrin W., Pickens A., Primus E.L., Pu L.-L., Puazo M., Quiles M.M.,
+RA   Quiroz J.B., Rabata D., Reeves K., Ruiz S.J., Shao H., Sisson I.,
+RA   Sonaike T., Sorelle R.P., Sutton A.E., Svatek A.F., Svetz L.A.,
+RA   Tamerisa K.S., Taylor T.R., Teague B., Thomas N., Thorn R.D., Trejos Z.Y.,
+RA   Trevino B.K., Ukegbu O.N., Urban J.B., Vasquez L.I., Vera V.A.,
+RA   Villasana D.M., Wang L., Ward-Moore S., Warren J.T., Wei X., White F.,
+RA   Williamson A.L., Wleczyk R., Wooden H.S., Wooden S.H., Yen J., Yoon L.,
+RA   Yoon V., Zorrilla S.E., Nelson D., Kucherlapati R., Weinstock G.,
+RA   Gibbs R.A.;
+RT   "The finished DNA sequence of human chromosome 12.";
+RL   Nature 440:346-351(2006).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RA   Mural R.J., Istrail S., Sutton G.G., Florea L., Halpern A.L., Mobarry C.M.,
+RA   Lippert R., Walenz B., Shatkay H., Dew I., Miller J.R., Flanigan M.J.,
+RA   Edwards N.J., Bolanos R., Fasulo D., Halldorsson B.V., Hannenhalli S.,
+RA   Turner R., Yooseph S., Lu F., Nusskern D.R., Shue B.C., Zheng X.H.,
+RA   Zhong F., Delcher A.L., Huson D.H., Kravitz S.A., Mouchard L., Reinert K.,
+RA   Remington K.A., Clark A.G., Waterman M.S., Eichler E.E., Adams M.D.,
+RA   Hunkapiller M.W., Myers E.W., Venter J.C.;
+RL   Submitted (JUL-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 231-528 (ISOFORM 1).
+RC   TISSUE=Ovary;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA project:
+RT   the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [7]
+RP   ACTIVITY REGULATION.
+RX   PubMed=10798398; DOI=10.1016/s0896-6273(00)81144-7;
+RA   Askwith C.C., Cheng C., Ikuma M., Benson C., Price M.P., Welsh M.J.;
+RT   "Neuropeptide FF and FMRFamide potentiate acid-evoked currents from sensory
+RT   neurons and proton-gated DEG/ENaC channels.";
+RL   Neuron 26:133-141(2000).
+RN   [8]
+RP   INTERACTION WITH PICK1.
+RX   PubMed=11802773; DOI=10.1042/0264-6021:3610443;
+RA   Hruska-Hageman A.M., Wemmie J.A., Price M.P., Welsh M.J.;
+RT   "Interaction of the synaptic protein PICK1 (protein interacting with C
+RT   kinase 1) with the non-voltage gated sodium channels BNC1 (brain Na+
+RT   channel 1) and ASIC (acid-sensing ion channel).";
+RL   Biochem. J. 361:443-450(2002).
+RN   [9]
+RP   PHOSPHORYLATION BY PKC.
+RX   PubMed=12244121; DOI=10.1074/jbc.m208995200;
+RA   Berdiev B.K., Xia J., Jovov B., Markert J.M., Mapstone T.B.,
+RA   Gillespie G.Y., Fuller C.M., Bubien J.K., Benos D.J.;
+RT   "Protein kinase C isoform antagonism controls BNaC2 (ASIC1) function.";
+RL   J. Biol. Chem. 277:45734-45740(2002).
+RN   [10]
+RP   INTERACTION WITH PICK1, SUBCELLULAR LOCATION, PHOSPHORYLATION BY PKA,
+RP   MUTAGENESIS OF SER-478 AND SER-479, AND PHOSPHORYLATION AT SER-479.
+RX   PubMed=12578970; DOI=10.1073/pnas.252782799;
+RA   Leonard A.S., Yermolaieva O., Hruska-Hageman A., Askwith C.C., Price M.P.,
+RA   Wemmie J.A., Welsh M.J.;
+RT   "cAMP-dependent protein kinase phosphorylation of the acid-sensing ion
+RT   channel-1 regulates its binding to the protein interacting with C-
+RT   kinase-1.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 100:2029-2034(2003).
+RN   [11]
+RP   REGULATION BY SERINE PROTEASES.
+RX   PubMed=15247234; DOI=10.1074/jbc.m407381200;
+RA   Poirot O., Vukicevic M., Boesch A., Kellenberger S.;
+RT   "Selective regulation of acid-sensing ion channel 1 by serine proteases.";
+RL   J. Biol. Chem. 279:38448-38457(2004).
+RN   [12]
+RP   ACTIVITY REGULATION BY THE SPIDER VENOM PSALMOTOXIN-1, SUBUNIT, SITE,
+RP   MUTAGENESIS OF PHE-352 AND ASP-357, AND SITES PHE-352 AND ASP-357.
+RX   PubMed=19654327; DOI=10.1074/jbc.m109.029009;
+RA   Sherwood T., Franke R., Conneely S., Joyner J., Arumugan P., Askwith C.;
+RT   "Identification of protein domains that control proton and calcium
+RT   sensitivity of ASIC1a.";
+RL   J. Biol. Chem. 284:27899-27907(2009).
+RN   [13]
+RP   ACTIVITY REGULATION BY SNAKE VENOM MAMBALGIN-1.
+RX   PubMed=23034652; DOI=10.1038/nature11494;
+RA   Diochot S., Baron A., Salinas M., Douguet D., Scarzello S.,
+RA   Dabert-Gay A.-S., Debayle D., Friend V., Alloui A., Lazdunski M.,
+RA   Lingueglia E.;
+RT   "Black mamba venom peptides target acid-sensing ion channels to abolish
+RT   pain.";
+RL   Nature 490:552-555(2012).
+RN   [14]
+RP   ACTIVITY REGULATION BY SPIDER VENOM PSALMOTOXIN-1.
+RX   PubMed=22760635; DOI=10.1038/ncomms1917;
+RA   Dawson R.J., Benz J., Stohler P., Tetaz T., Joseph C., Huber S., Schmid G.,
+RA   Hugin D., Pflimlin P., Trube G., Rudolph M.G., Hennig M., Ruf A.;
+RT   "Structure of the acid-sensing ion channel 1 in complex with the gating
+RT   modifier Psalmotoxin 1.";
+RL   Nat. Commun. 3:936-943(2012).
+RN   [15]
+RP   ACTIVITY REGULATION BY PI-THERAPHOTOXIN-HM3A.
+RX   PubMed=28327374; DOI=10.1016/j.neuropharm.2017.03.020;
+RA   Er S.Y., Cristofori-Armstrong B., Escoubas P., Rash L.D.;
+RT   "Discovery and molecular interaction studies of a highly stable, tarantula
+RT   peptide modulator of acid-sensing ion channel 1.";
+RL   Neuropharmacology 114:3750-3755(2017).
+RN   [16] {ECO:0007744|PDB:7CFS, ECO:0007744|PDB:7CFT}
+RP   STRUCTURE BY ELECTRON MICROSCOPY (3.56 ANGSTROMS) OF 1-468 IN COMPLEX WITH
+RP   SNAKE VENOM MAMBALGIN-1, FUNCTION, TRANSPORTER ACTIVITY, ACTIVITY
+RP   REGULATION BY SNAKE VENOM MAMBALGIN-1, SUBUNIT, SUBCELLULAR LOCATION,
+RP   GLYCOSYLATION AT ASN-368 AND ASN-395, DISULFIDE BONDS, TOPOLOGY, MOTIF, AND
+RP   MUTAGENESIS OF GLN-102; ARG-155; ASP-167; ASP-347; ASP-351; PHE-352 AND
+RP   TYR-360.
+RX   PubMed=32915133; DOI=10.7554/elife.57096;
+RA   Sun D., Liu S., Li S., Zhang M., Yang F., Wen M., Shi P., Wang T., Pan M.,
+RA   Chang S., Zhang X., Zhang L., Tian C., Liu L.;
+RT   "Structural insights into human acid-sensing ion channel 1a inhibition by
+RT   snake toxin mambalgin1.";
+RL   Elife 9:e57096-e57096(2020).
+RN   [17] {ECO:0007744|PDB:7RNN}
+RP   STRUCTURE BY ELECTRON MICROSCOPY (2.86 ANGSTROMS) OF 39-462 OF HOMOTRIMER
+RP   IN CLOSED CONFORMATION, FUNCTION, TRANSPORTER ACTIVITY, ACTIVITY
+RP   REGULATION, SUBUNIT, DISULFIDE BONDS, AND TOPOLOGY.
+RX   PubMed=34319232; DOI=10.7554/elife.67115;
+RA   Wu Y., Chen Z., Sigworth F.J., Canessa C.M.;
+RT   "Structure and analysis of nanobody binding to the human ASIC1a ion
+RT   channel.";
+RL   Elife 10:e67115-e67115(2021).
+CC   -!- FUNCTION: Forms voltage-independent, pH-gated trimeric sodium channels
+CC       that act as postsynaptic excitatory receptors in the nervous system,
+CC       playing a crucial role in regulating synaptic plasticity, learning, and
+CC       memory (PubMed:21036899, PubMed:32915133, PubMed:34319232). Upon
+CC       extracellular pH drop this channel elicits transient, fast activating,
+CC       and completely desensitizing inward currents (PubMed:21036899).
+CC       Displays high selectivity for sodium ions but can also permit the
+CC       permeation of other cations (PubMed:21036899). Regulates more or less
+CC       directly intracellular calcium concentration and CaMKII
+CC       phosphorylation, and thereby the density of dendritic spines. Modulates
+CC       neuronal activity in the circuits underlying innate fear (By
+CC       similarity). {ECO:0000250|UniProtKB:Q6NXK8,
+CC       ECO:0000269|PubMed:21036899, ECO:0000269|PubMed:32915133,
+CC       ECO:0000269|PubMed:34319232}.
+CC   -!- FUNCTION: [Isoform Asic1a]: Has high selectivity for sodium ions, but
+CC       can also be permeable to other cations including calcium, lithium and
+CC       potassium. {ECO:0000269|PubMed:21036899}.
+CC   -!- FUNCTION: [Isoform Asic1b]: Produces acid activated currents with a
+CC       reduced amplitude and inactivates faster (PubMed:21036899). Has high
+CC       selectivity for sodium ions but also supports a calcium-mediated
+CC       current which is sustained and maintained as long as acidic conditions
+CC       are present (PubMed:21036899). Also potentially permeable to lithium
+CC       and potassium (PubMed:21036899). {ECO:0000269|PubMed:21036899}.
+CC   -!- FUNCTION: [Isoform 1]: Has no measurable proton-gated sodium channel
+CC       activity in vitro. {ECO:0000269|PubMed:21036899}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=Na(+)(in) = Na(+)(out); Xref=Rhea:RHEA:34963,
+CC         ChEBI:CHEBI:29101; Evidence={ECO:0000269|PubMed:21036899,
+CC         ECO:0000269|PubMed:32915133, ECO:0000269|PubMed:34319232};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=K(+)(in) = K(+)(out); Xref=Rhea:RHEA:29463, ChEBI:CHEBI:29103;
+CC         Evidence={ECO:0000269|PubMed:21036899};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=Li(+)(in) = Li(+)(out); Xref=Rhea:RHEA:78551,
+CC         ChEBI:CHEBI:49713; Evidence={ECO:0000269|PubMed:21036899};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=Ca(2+)(in) = Ca(2+)(out); Xref=Rhea:RHEA:29671,
+CC         ChEBI:CHEBI:29108; Evidence={ECO:0000269|PubMed:21036899};
+CC   -!- ACTIVITY REGULATION: Potentiated by FMRFamide-related neuropeptides,
+CC       which are induced during inflammation and modulate pain responses
+CC       (PubMed:10798398). Inhibited by the diuretic drug amiloride
+CC       (PubMed:34319232). Spider venom psalmotoxin-1 inhibits the channel by
+CC       locking it in its desensitized conformation (PubMed:19654327,
+CC       PubMed:21036899, PubMed:22760635, PubMed:34319232). The homotrimeric
+CC       channel is inhibited by the spider venom pi-theraphotoxin-Hm3a
+CC       (PubMed:28327374). Homotrimeric and heterotrimeric (with ASIC2 isoform
+CC       1) channels are inhibited by the snake venom mambalgin-1, which
+CC       prevents proton-induced transitions from the resting closed state to
+CC       the active and/or desensitized states (PubMed:23034652,
+CC       PubMed:32915133). Inhibited by Texas coral snake toxin MitTx1
+CC       (PubMed:34319232). {ECO:0000269|PubMed:10798398,
+CC       ECO:0000269|PubMed:19654327, ECO:0000269|PubMed:21036899,
+CC       ECO:0000269|PubMed:22760635, ECO:0000269|PubMed:23034652,
+CC       ECO:0000269|PubMed:28327374, ECO:0000269|PubMed:32915133,
+CC       ECO:0000269|PubMed:34319232}.
+CC   -!- SUBUNIT: Forms functional homotrimeric channels (PubMed:32915133,
+CC       PubMed:34319232). Forms heterotrimers with other ASIC proteins,
+CC       resulting in channels with distinct properties (PubMed:19654327).
+CC       Interacts with PICK1; regulates ASIC1 clustering in membranes
+CC       (PubMed:11802773, PubMed:12578970). Interacts with STOM; alters
+CC       heterotrimeric channels activity (By similarity).
+CC       {ECO:0000250|UniProtKB:Q6NXK8, ECO:0000269|PubMed:11802773,
+CC       ECO:0000269|PubMed:12578970, ECO:0000269|PubMed:19654327,
+CC       ECO:0000269|PubMed:32915133, ECO:0000269|PubMed:34319232}.
+CC   -!- SUBUNIT: [Isoform Asic1a]: Interacts with PCYOX1L; increases ion
+CC       channel currents by increasing Asic1a surface expression.
+CC       {ECO:0000250|UniProtKB:P55926}.
+CC   -!- INTERACTION:
+CC       P78348; Q8N743: KIR3DL3; NbExp=3; IntAct=EBI-79189, EBI-17272405;
+CC       P78348; Q99735: MGST2; NbExp=3; IntAct=EBI-79189, EBI-11324706;
+CC       P78348; Q9NRD5: PICK1; NbExp=4; IntAct=EBI-79189, EBI-79165;
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000269|PubMed:12578970,
+CC       ECO:0000269|PubMed:21036899}; Multi-pass membrane protein
+CC       {ECO:0000269|PubMed:32915133, ECO:0000269|PubMed:34319232}.
+CC       Postsynaptic cell membrane {ECO:0000250|UniProtKB:Q6NXK8}. Cell
+CC       projection, dendrite {ECO:0000250|UniProtKB:Q6NXK8}. Note=Isolated in
+CC       synaptosomes from the dendritic synapses of neurons.
+CC       {ECO:0000250|UniProtKB:Q6NXK8}.
+CC   -!- SUBCELLULAR LOCATION: [Isoform Asic1a]: Cell membrane
+CC       {ECO:0000250|UniProtKB:P55926}; Multi-pass membrane protein
+CC       {ECO:0000255}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=3;
+CC       Name=Asic1a; Synonyms=hvariant 2 {ECO:0000303|PubMed:21036899};
+CC         IsoId=P78348-2; Sequence=Displayed;
+CC       Name=1; Synonyms=hvariant 1 {ECO:0000303|PubMed:21036899};
+CC         IsoId=P78348-1; Sequence=VSP_015596;
+CC       Name=Asic1b; Synonyms=hvariant 3 {ECO:0000303|PubMed:21036899};
+CC         IsoId=P78348-3; Sequence=VSP_045298;
+CC   -!- TISSUE SPECIFICITY: Expressed in neurons throughout the central and
+CC       peripheral nervous system. {ECO:0000269|PubMed:9037075}.
+CC   -!- DOMAIN: The second transmembrane domain (TM2) is a discontinuous alpha-
+CC       helix disrupted by the GAS motif, which forms the selectivity filter by
+CC       adopting an extended, belt-like conformation aligned approximately
+CC       parallel to the membrane plane. This peptide belt encircles the waist
+CC       of the channel and divides TM2 into two discontinuous helical segments.
+CC       The distal helical segment of TM2 interacts with the cytoplasmic
+CC       portion of the first transmembrane domain (TM1) from a neighboring
+CC       subunit, contributing to the structural and functional integrity of the
+CC       channel. {ECO:0000250|UniProtKB:Q1XA76}.
+CC   -!- PTM: pH-gating could be regulated by serine proteases.
+CC       {ECO:0000269|PubMed:15247234}.
+CC   -!- PTM: Phosphorylation by PKA regulates interaction with PICK1 and
+CC       subcellular localization (PubMed:12578970). Phosphorylation by PKC may
+CC       regulate the channel (PubMed:12244121). {ECO:0000269|PubMed:12244121,
+CC       ECO:0000269|PubMed:12578970}.
+CC   -!- SIMILARITY: Belongs to the amiloride-sensitive sodium channel
+CC       (TC 1.A.6) family. ASIC1 subfamily. {ECO:0000305}.
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; U78180; AAB48980.1; -; mRNA.
+DR   EMBL; U78181; AAB48981.1; -; mRNA.
+DR   EMBL; HM991481; ADP44689.1; -; mRNA.
+DR   EMBL; EU078959; ABU48925.1; -; mRNA.
+DR   EMBL; AC025154; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; CH471111; EAW58118.1; -; Genomic_DNA.
+DR   EMBL; BC013891; AAH13891.2; -; mRNA.
+DR   EMBL; BC133707; AAI33708.1; -; mRNA.
+DR   CCDS; CCDS44876.1; -. [P78348-2]
+DR   CCDS; CCDS58228.1; -. [P78348-3]
+DR   CCDS; CCDS8796.1; -. [P78348-1]
+DR   RefSeq; NP_001086.2; NM_001095.4. [P78348-2]
+DR   RefSeq; NP_001243759.1; NM_001256830.2. [P78348-3]
+DR   RefSeq; NP_001399686.1; NM_001412757.1. [P78348-2]
+DR   RefSeq; NP_064423.2; NM_020039.4. [P78348-1]
+DR   PDB; 6L6I; X-ray; 3.24 A; A/B/C=25-464.
+DR   PDB; 6L6N; X-ray; 2.86 A; A/B/C=25-464.
+DR   PDB; 7CFS; EM; 3.56 A; A/B/C=1-468.
+DR   PDB; 7CFT; EM; 3.90 A; A/B/C=1-468.
+DR   PDB; 7RNN; EM; 2.86 A; D=1-528.
+DR   PDB; 9E4A; EM; 2.74 A; A/B/C=1-528.
+DR   PDB; 9E4B; EM; 3.09 A; A/B/C=1-528.
+DR   PDB; 9E4C; EM; 3.41 A; A/B/C=1-528.
+DR   PDB; 9E4D; EM; 3.19 A; A/B/C=1-528.
+DR   PDB; 9E4E; EM; 3.16 A; A/B/C=1-528.
+DR   PDB; 9E4F; EM; 2.69 A; A/B/C=1-528.
+DR   PDB; 9E4G; EM; 2.80 A; A/B/C=1-528.
+DR   PDB; 9E4H; EM; 2.61 A; A/B/C=1-528.
+DR   PDB; 9E4I; EM; 2.33 A; A/B/C=1-528.
+DR   PDB; 9E4J; EM; 2.87 A; A/B/C=1-528.
+DR   PDB; 9E4K; EM; 2.77 A; A/B/C=1-528.
+DR   AlphaFoldDB; P78348; -.
+DR   EMDB; EMD-24580; -.
+DR   EMDB; EMD-30346; -.
+DR   EMDB; EMD-30347; -.
+DR   EMDB; EMD-47503; -.
+DR   EMDB; EMD-47504; -.
+DR   EMDB; EMD-47505; -.
+DR   EMDB; EMD-47506; -.
+DR   EMDB; EMD-47507; -.
+DR   EMDB; EMD-47508; -.
+DR   EMDB; EMD-47509; -.
+DR   EMDB; EMD-47510; -.
+DR   EMDB; EMD-47511; -.
+DR   EMDB; EMD-47512; -.
+DR   EMDB; EMD-47513; -.
+DR   SMR; P78348; -.
+DR   BioGRID; 106559; 91.
+DR   FunCoup; P78348; 1039.
+DR   IntAct; P78348; 50.
+DR   STRING; 9606.ENSP00000228468; -.
+DR   BindingDB; P78348; -.
+DR   ChEMBL; CHEMBL1628477; -.
+DR   DrugBank; DB00594; Amiloride.
+DR   DrugBank; DB00586; Diclofenac.
+DR   DrugCentral; P78348; -.
+DR   GuidetoPHARMACOLOGY; 684; -.
+DR   GlyCosmos; P78348; 2 sites, No reported glycans.
+DR   GlyGen; P78348; 2 sites, 1 N-linked glycan (1 site).
+DR   iPTMnet; P78348; -.
+DR   PhosphoSitePlus; P78348; -.
+DR   SwissPalm; P78348; -.
+DR   BioMuta; ASIC1; -.
+DR   DMDM; 296439456; -.
+DR   jPOST; P78348; -.
+DR   MassIVE; P78348; -.
+DR   PaxDb; 9606-ENSP00000228468; -.
+DR   PeptideAtlas; P78348; -.
+DR   ProteomicsDB; 15296; -.
+DR   ProteomicsDB; 57582; -. [P78348-2]
+DR   ProteomicsDB; 57583; -. [P78348-1]
+DR   Pumba; P78348; -.
+DR   Antibodypedia; 26132; 385 antibodies from 39 providers.
+DR   DNASU; 41; -.
+DR   Ensembl; ENST00000228468.8; ENSP00000228468.4; ENSG00000110881.13. [P78348-1]
+DR   Ensembl; ENST00000447966.7; ENSP00000400228.3; ENSG00000110881.13. [P78348-2]
+DR   Ensembl; ENST00000552438.5; ENSP00000450247.1; ENSG00000110881.13. [P78348-3]
+DR   Ensembl; ENST00000895674.1; ENSP00000565733.1; ENSG00000110881.13. [P78348-2]
+DR   GeneID; 41; -.
+DR   KEGG; hsa:41; -.
+DR   MANE-Select; ENST00000447966.7; ENSP00000400228.3; NM_001095.4; NP_001086.2.
+DR   UCSC; uc001rvv.5; human. [P78348-2]
+DR   AGR; HGNC:100; -.
+DR   ClinPGx; PA24434; -.
+DR   CTD; 41; -.
+DR   DisGeNET; 41; -.
+DR   GeneCards; ASIC1; -.
+DR   HGNC; HGNC:100; ASIC1.
+DR   HPA; ENSG00000110881; Tissue enriched (brain).
+DR   MIM; 602866; gene.
+DR   OpenTargets; ENSG00000110881; -.
+DR   VEuPathDB; HostDB:ENSG00000110881; -.
+DR   eggNOG; KOG4294; Eukaryota.
+DR   GeneTree; ENSGT00940000158414; -.
+DR   HOGENOM; CLU_020415_1_2_1; -.
+DR   InParanoid; P78348; -.
+DR   OMA; EVAASHM; -.
+DR   OrthoDB; 6021021at2759; -.
+DR   PAN-GO; P78348; 4 GO annotations based on evolutionary models.
+DR   PhylomeDB; P78348; -.
+DR   PathwayCommons; P78348; -.
+DR   Reactome; R-HSA-2672351; Stimuli-sensing channels.
+DR   SignaLink; P78348; -.
+DR   SIGNOR; P78348; -.
+DR   Agora; ENSG00000110881; -.
+DR   BioGRID-ORCS; 41; 36 hits in 1158 CRISPR screens.
+DR   ChiTaRS; ASIC1; human.
+DR   GeneWiki; ACCN2; -.
+DR   GenomeRNAi; 41; -.
+DR   Pharos; P78348; Tchem.
+DR   PRO; PR:P78348; -.
+DR   Proteomes; UP000005640; Chromosome 12.
+DR   RNAct; P78348; protein.
+DR   Bgee; ENSG00000110881; Expressed in right hemisphere of cerebellum and 140 other cell types or tissues.
+DR   ExpressionAtlas; P78348; baseline and differential.
+DR   GO; GO:0009986; C:cell surface; IEA:Ensembl.
+DR   GO; GO:0030425; C:dendrite; IEA:UniProtKB-SubCell.
+DR   GO; GO:0098978; C:glutamatergic synapse; IDA:SynGO.
+DR   GO; GO:0005886; C:plasma membrane; IDA:UniProtKB.
+DR   GO; GO:0098839; C:postsynaptic density membrane; IDA:SynGO.
+DR   GO; GO:0045211; C:postsynaptic membrane; ISS:UniProtKB.
+DR   GO; GO:0015280; F:ligand-gated sodium channel activity; IEA:InterPro.
+DR   GO; GO:0022839; F:monoatomic ion-gated channel activity; IEA:Ensembl.
+DR   GO; GO:0160128; F:pH-gated monoatomic ion channel activity; IDA:UniProtKB.
+DR   GO; GO:0071467; P:cellular response to pH; IDA:UniProtKB.
+DR   GO; GO:0150052; P:regulation of postsynapse assembly; IEA:Ensembl.
+DR   GO; GO:0050915; P:sensory perception of sour taste; IMP:UniProtKB.
+DR   GO; GO:0035725; P:sodium ion transmembrane transport; IDA:UniProtKB.
+DR   GO; GO:0006814; P:sodium ion transport; NAS:UniProtKB.
+DR   FunFam; 1.10.287.820:FF:000001; acid-sensing ion channel 1 isoform X2; 1.
+DR   FunFam; 1.10.3590.10:FF:000001; acid-sensing ion channel 1 isoform X2; 1.
+DR   FunFam; 1.10.3590.10:FF:000002; acid-sensing ion channel 1 isoform X2; 1.
+DR   FunFam; 1.10.287.770:FF:000001; Acid-sensing ion channel subunit 1; 1.
+DR   Gene3D; 1.10.3590.10; acid-sensing ion channel 1 domain; 2.
+DR   Gene3D; 1.10.287.820; Acid-sensing ion channel domain; 1.
+DR   Gene3D; 1.10.287.770; YojJ-like; 2.
+DR   InterPro; IPR001873; ENaC.
+DR   InterPro; IPR004724; ENaC_chordates.
+DR   InterPro; IPR020903; ENaC_CS.
+DR   NCBIfam; TIGR00859; ENaC; 1.
+DR   PANTHER; PTHR11690:SF170; ACID-SENSING ION CHANNEL 1; 1.
+DR   PANTHER; PTHR11690; AMILORIDE-SENSITIVE SODIUM CHANNEL-RELATED; 1.
+DR   Pfam; PF00858; ASC; 1.
+DR   PRINTS; PR01078; AMINACHANNEL.
+DR   PROSITE; PS01206; ASC; 1.
+DR   PDBsum; 6L6I; -.
+DR   PDBsum; 6L6N; -.
+DR   PDBsum; 7CFS; -.
+DR   PDBsum; 7CFT; -.
+DR   PDBsum; 7RNN; -.
+DR   PDBsum; 9E4A; -.
+DR   PDBsum; 9E4B; -.
+DR   PDBsum; 9E4C; -.
+DR   PDBsum; 9E4D; -.
+DR   PDBsum; 9E4E; -.
+DR   PDBsum; 9E4F; -.
+DR   PDBsum; 9E4G; -.
+DR   PDBsum; 9E4H; -.
+DR   PDBsum; 9E4I; -.
+DR   PDBsum; 9E4J; -.
+DR   PDBsum; 9E4K; -.
+PE   1: Evidence at protein level;
+KW   3D-structure; Alternative splicing; Calcium; Calcium transport;
+KW   Cell membrane; Cell projection; Disulfide bond; Glycoprotein; Ion channel;
+KW   Ion transport; Membrane; Phosphoprotein; Postsynaptic cell membrane;
+KW   Proteomics identification; Reference proteome; Sodium; Sodium channel;
+KW   Sodium transport; Synapse; Transmembrane; Transmembrane helix; Transport.
+FT   CHAIN           1..528
+FT                   /note="Acid-sensing ion channel 1"
+FT                   /id="PRO_0000181294"
+FT   TOPO_DOM        1..49
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000269|PubMed:34319232,
+FT                   ECO:0007744|PDB:7RNN"
+FT   TRANSMEM        50..66
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000305|PubMed:34319232,
+FT                   ECO:0007744|PDB:7RNN"
+FT   TOPO_DOM        67..427
+FT                   /note="Extracellular"
+FT                   /evidence="ECO:0000269|PubMed:34319232,
+FT                   ECO:0007744|PDB:7RNN"
+FT   TRANSMEM        428..458
+FT                   /note="Discontinuously helical"
+FT                   /evidence="ECO:0000305|PubMed:34319232,
+FT                   ECO:0007744|PDB:7RNN"
+FT   TOPO_DOM        459..528
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000269|PubMed:34319232,
+FT                   ECO:0007744|PDB:7RNN"
+FT   MOTIF           444..446
+FT                   /note="GAS motif; ion selectivity filter"
+FT                   /evidence="ECO:0000305|PubMed:34319232,
+FT                   ECO:0007744|PDB:7RNN"
+FT   SITE            79
+FT                   /note="Involved in channel desensitization; the process by
+FT                   which the channel becomes unresponsive to proton
+FT                   stimulation"
+FT                   /evidence="ECO:0000250|UniProtKB:Q1XA76"
+FT   SITE            352
+FT                   /note="Involved in the inhibition by the spider venom
+FT                   psalmotoxin-1"
+FT                   /evidence="ECO:0000269|PubMed:19654327"
+FT   SITE            357
+FT                   /note="Involved in proton-dependent gating"
+FT                   /evidence="ECO:0000269|PubMed:19654327"
+FT   MOD_RES         479
+FT                   /note="Phosphoserine; by PKA"
+FT                   /evidence="ECO:0000269|PubMed:12578970"
+FT   MOD_RES         499
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:Q6NXK8"
+FT   CARBOHYD        368
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000269|PubMed:32915133,
+FT                   ECO:0000269|PubMed:34319232, ECO:0007744|PDB:7CFS,
+FT                   ECO:0007744|PDB:7CFT, ECO:0007744|PDB:7RNN"
+FT   CARBOHYD        395
+FT                   /note="N-linked (GlcNAc...) asparagine"
+FT                   /evidence="ECO:0000269|PubMed:32915133,
+FT                   ECO:0000269|PubMed:34319232, ECO:0007744|PDB:7CFS,
+FT                   ECO:0007744|PDB:7CFT, ECO:0007744|PDB:7RNN"
+FT   DISULFID        93..194
+FT                   /evidence="ECO:0000269|PubMed:32915133,
+FT                   ECO:0000269|PubMed:34319232, ECO:0007744|PDB:7CFS,
+FT                   ECO:0007744|PDB:7CFT, ECO:0007744|PDB:7RNN"
+FT   DISULFID        172..179
+FT                   /evidence="ECO:0000269|PubMed:32915133,
+FT                   ECO:0000269|PubMed:34319232, ECO:0007744|PDB:7CFS,
+FT                   ECO:0007744|PDB:7CFT, ECO:0007744|PDB:7RNN"
+FT   DISULFID        290..367
+FT                   /evidence="ECO:0000269|PubMed:32915133,
+FT                   ECO:0000269|PubMed:34319232, ECO:0007744|PDB:7CFS,
+FT                   ECO:0007744|PDB:7CFT, ECO:0007744|PDB:7RNN"
+FT   DISULFID        310..363
+FT                   /evidence="ECO:0000269|PubMed:32915133,
+FT                   ECO:0000269|PubMed:34319232, ECO:0007744|PDB:7CFS,
+FT                   ECO:0007744|PDB:7CFT, ECO:0007744|PDB:7RNN"
+FT   DISULFID        314..361
+FT                   /evidence="ECO:0000269|PubMed:32915133,
+FT                   ECO:0000269|PubMed:34319232, ECO:0007744|PDB:7CFS,
+FT                   ECO:0007744|PDB:7CFT, ECO:0007744|PDB:7RNN"
+FT   DISULFID        323..345
+FT                   /evidence="ECO:0000269|PubMed:32915133,
+FT                   ECO:0000269|PubMed:34319232, ECO:0007744|PDB:7CFS,
+FT                   ECO:0007744|PDB:7CFT, ECO:0007744|PDB:7RNN"
+FT   DISULFID        325..337
+FT                   /evidence="ECO:0000269|PubMed:32915133,
+FT                   ECO:0000269|PubMed:34319232, ECO:0007744|PDB:7CFS,
+FT                   ECO:0007744|PDB:7CFT, ECO:0007744|PDB:7RNN"
+FT   VAR_SEQ         1..185
+FT                   /note="MELKAEEEEVGGVQPVSIQAFASSSTLHGLAHIFSYERLSLKRALWALCFLG
+FT                   SLAVLLCVCTERVQYYFHYHHVTKLDEVAASQLTFPAVTLCNLNEFRFSQVSKNDLYHA
+FT                   GELLALLNNRYEIPDTQMADEKQLEILQDKANFRSFKPKPFNMREFYDRAGHDIRDMLL
+FT                   SCHFRGEVCSAEDFK -> MPIQIFCSMSFSSGEEAPGPLGDIWGPHHHQQQQDISESE
+FT                   EEEEEKEKEAVRKEASEGHSPMDLVAFANSCTLHGTNHIFVEGGPGPRQVLWAVAFVLA
+FT                   LGAFLCQVGDRVAYYLSYPHVTLLNEVATTELAFPAVTLCNTNAVRLSQLSYPDLLYLA
+FT                   PMLGLDESDDPGVPLAPPGPEAFSGEPFNLHRFYNRSCHRLEDMLLYCSYQGGPCGPHN
+FT                   FS (in isoform Asic1b)"
+FT                   /evidence="ECO:0000303|PubMed:21036899"
+FT                   /id="VSP_045298"
+FT   VAR_SEQ         433
+FT                   /note="G -> GELLMTPVPFSCHGHGVAPYHPKAGCSLLSHEGPPPQRPFPKPCCLG
+FT                   (in isoform 1)"
+FT                   /evidence="ECO:0000303|PubMed:15489334,
+FT                   ECO:0000303|PubMed:9037075, ECO:0000303|Ref.3"
+FT                   /id="VSP_015596"
+FT   MUTAGEN         102
+FT                   /note="Q->R: Decreased inhibition by mambalgin-1; when
+FT                   associated with E-167."
+FT                   /evidence="ECO:0000269|PubMed:32915133"
+FT   MUTAGEN         155
+FT                   /note="R->L,F: Decreased inhibition by mambalgin-1."
+FT                   /evidence="ECO:0000269|PubMed:32915133"
+FT   MUTAGEN         167
+FT                   /note="D->E: Decreased inhibition by mambalgin-1; when
+FT                   associated with R-102."
+FT                   /evidence="ECO:0000269|PubMed:32915133"
+FT   MUTAGEN         347
+FT                   /note="D->A: Loss of inhibition by mambalgin-1. Changed
+FT                   pH-gating as lower pH is required for activation."
+FT                   /evidence="ECO:0000269|PubMed:32915133"
+FT   MUTAGEN         351
+FT                   /note="D->G: Decreased inhibition by mambalgin-1. Changed
+FT                   pH-gating as lower pH is required for activation."
+FT                   /evidence="ECO:0000269|PubMed:32915133"
+FT   MUTAGEN         352
+FT                   /note="F->L: Complete loss in the shift of pH for both
+FT                   activation and desensitization by the spider venom
+FT                   psalmotoxin-1. Decreased inhibition by mambalgin-1."
+FT                   /evidence="ECO:0000269|PubMed:19654327,
+FT                   ECO:0000269|PubMed:32915133"
+FT   MUTAGEN         357
+FT                   /note="D->A,N: Changed pH-gating as lower pH is required
+FT                   for activation."
+FT                   /evidence="ECO:0000269|PubMed:19654327"
+FT   MUTAGEN         360
+FT                   /note="Y->A: Loss of inhibition by mambalgin-1."
+FT                   /evidence="ECO:0000269|PubMed:32915133"
+FT   MUTAGEN         478
+FT                   /note="S->A: No effect on phosphorylation."
+FT                   /evidence="ECO:0000269|PubMed:12578970"
+FT   MUTAGEN         479
+FT                   /note="S->A: Loss of phosphorylation."
+FT                   /evidence="ECO:0000269|PubMed:12578970"
+FT   CONFLICT        212
+FT                   /note="G -> D (in Ref. 1; AAB48980/AAB48981)"
+FT                   /evidence="ECO:0000305"
+FT   HELIX           25..34
+FT                   /evidence="ECO:0007829|PDB:6L6I"
+FT   HELIX           38..40
+FT                   /evidence="ECO:0007829|PDB:6L6I"
+FT   TURN            46..50
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           51..61
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           63..70
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   STRAND          73..81
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   STRAND          89..95
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           100..102
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           105..111
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   TURN            112..116
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           132..141
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           149..151
+FT                   /evidence="ECO:0007829|PDB:7RNN"
+FT   HELIX           154..161
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           165..168
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   STRAND          169..174
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           181..183
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   STRAND          184..189
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   STRAND          192..197
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           204..207
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   STRAND          208..211
+FT                   /evidence="ECO:0007829|PDB:6L6I"
+FT   HELIX           214..216
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   STRAND          217..223
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           226..228
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   STRAND          243..250
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   STRAND          252..254
+FT                   /evidence="ECO:0007829|PDB:7RNN"
+FT   HELIX           258..261
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   STRAND          263..265
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   STRAND          269..281
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   TURN            285..287
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   STRAND          302..304
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           307..323
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   STRAND          332..334
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           342..346
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           347..355
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           358..360
+FT                   /evidence="ECO:0007829|PDB:6L6I"
+FT   STRAND          366..382
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           384..393
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           398..404
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   STRAND          405..426
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+FT   HELIX           429..448
+FT                   /evidence="ECO:0007829|PDB:6L6N"
+SQ   SEQUENCE   528 AA;  59909 MW;  9E998F711C208450 CRC64;
+     MELKAEEEEV GGVQPVSIQA FASSSTLHGL AHIFSYERLS LKRALWALCF LGSLAVLLCV
+     CTERVQYYFH YHHVTKLDEV AASQLTFPAV TLCNLNEFRF SQVSKNDLYH AGELLALLNN
+     RYEIPDTQMA DEKQLEILQD KANFRSFKPK PFNMREFYDR AGHDIRDMLL SCHFRGEVCS
+     AEDFKVVFTR YGKCYTFNSG RDGRPRLKTM KGGTGNGLEI MLDIQQDEYL PVWGETDETS
+     FEAGIKVQIH SQDEPPFIDQ LGFGVAPGFQ TFVACQEQRL IYLPPPWGTC KAVTMDSDLD
+     FFDSYSITAC RIDCETRYLV ENCNCRMVHM PGDAPYCTPE QYKECADPAL DFLVEKDQEY
+     CVCEMPCNLT RYGKELSMVK IPSKASAKYL AKKFNKSEQY IGENILVLDI FFEVLNYETI
+     EQKKAYEIAG LLGDIGGQMG LFIGASILTV LELFDYAYEV IKHKLCRRGK CQKEAKRSSA
+     DKGVALSLDD VKRHNPCESL RGHPAGMTYA ANILPHHPAR GTFEDFTC
+//

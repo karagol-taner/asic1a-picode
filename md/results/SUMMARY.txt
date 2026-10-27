@@ -1,0 +1,35 @@
+ASIC1a pI-code MD, position 246
+pI-code K246Q and comparator K246M, both from wild-type K246
+
+pocket pair          wt    K246Q    K246M      |Q-wt|    |M-wt|
+A|D237-D351       13.57     7.43     9.23        6.13      4.34
+A|E238-D347        5.45     5.11     4.76        0.35      0.69
+A|E219-D409        5.37     5.16     5.26        0.22      0.11
+A|E79-E418         5.83     5.18     5.27        0.65      0.56
+B|D237-D351       11.53    13.10     8.50        1.58      3.03
+B|E238-D347        6.16     5.87     7.10        0.30      0.94
+B|E219-D409        5.96     5.26     5.08        0.70      0.88
+B|E79-E418         5.17     6.42     4.99        1.25      0.18
+C|D237-D351        9.26    10.72    12.33        1.45      3.07
+C|E238-D347        4.46     5.37     5.16        0.90      0.70
+C|E219-D409        5.12     5.57     5.51        0.44      0.38
+C|E79-E418         6.40     5.07     5.67        1.33      0.73
+
+mean departure from wild type over 12 pocket-pair measurements
+   pI-code K246Q    1.275 A
+   comparator K246M 1.301 A
+   median         Q 0.802 A, M 0.715 A
+
+pI-code closer to wild type in 5 of 12 pairs
+sign test p 0.774, Wilcoxon signed-rank p 1.000
+never within 4 A in any build (not a contact here): B|D237-D351, C|D237-D351
+
+position 246 reach to the neighbouring subunit D409, mean over 3 interfaces
+   wild type K246 NZ 7.92 A,  K246Q NE2 8.66 A,  K246M CE 8.73 A
+
+backbone RMSD, A: wt 2.62, ladder 2.64, compare 2.63
+frames per build: 2001  (first 20% discarded)
+
+Neither substitution moves the pocket from wild type beyond the subunit-to-subunit scatter, and the two are indistinguishable from each other (sign p 0.77, Wilcoxon p 1.00). The mean departure differs by 0.026 A, carried by the D237-D351 pairs, which barely form contacts.
+The engineered side chain at 246 does not reach the neighbouring D409 in any build (7.9 to 8.7 A, never within 4 A).
+This is a structural control over one 20 ns trajectory per build with the three subunits as the only replication. It tests whether either substitution remodels the pocket, not what either does to pH50.
