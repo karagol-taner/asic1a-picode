@@ -1,4 +1,4 @@
-# Charge change predicts the effect of a pH-responsive protein design ladder in acid-sensing ion channel 1a
+# Position and charge change predict measured pH50 shifts in a pI-code ladder test of acid-sensing ion channel 1a
 
 **Taner Karagöl¹,³,\*,‡, Alper Karagöl²,³,\*,‡**
 
@@ -12,7 +12,7 @@
 
 ## Abstract
 
-Protein design methods that restrict substitutions to single base changes assume that the resulting near-isosteric swaps are the ones least likely to disturb a fold, supported so far by side-chain geometry and by substitution costs from variant-effect predictors and curated human variation, none of which measures function. We test it against acid-sensing ion channel 1a, a target carrying a measured, continuous, per-substitution functional readout, using 117 single substitutions over 38 positions recorded under one protocol in one laboratory, plus 33 substitutions from a second laboratory supplying two edges the first set cannot reach. Holding position, charge change and side-chain volume fixed across 101 substitutions at 22 positions, ladder membership changes the activation shift by -0.035 pH units (permutation p = 0.437) and the steady-state desensitization shift by -0.001 units (p = 0.974), while charge change carries the measured effect at +0.170 pH units per charge unit. A sign test over charge-matched pairs at single positions does not separate them either (p = 0.110), and reaches nominal significance only when the indicator is widened past the twelve edges the method defines. What does predict the shift is a property of the position, not the residue pair: relative side-chain burial orders it at -0.595 across the 38 scanned positions (permutation p = 0.0001) on the acidified structure, falling to -0.111 (p = 0.508) on the resting one. Codon-level constraint therefore delivers charge bookkeeping with no detectable tolerance effect, and pathogenicity-derived costs should not be quoted as predicting pH behaviour.
+Protein design methods that restrict substitutions to single base changes assume that the resulting near-isosteric swaps are the ones least likely to disturb a fold, an assumption supported so far by side-chain geometry and by substitution costs drawn from variant-effect predictors and curated human variation. None of those is a measurement of function. We test it against acid-sensing ion channel 1a, a target carrying a measured, continuous, per-substitution functional readout, using 117 single substitutions over 38 positions recorded under one protocol in one laboratory, with an independent series of 33 substitutions supplying two ladder edges the first set cannot reach. What predicts the measured shift is a property of the position and not of the residue pair. Relative side-chain burial orders it at -0.595 across the 38 scanned positions (permutation p = 0.0001) on the acidified structure, falling to -0.111 (p = 0.508) on the resting one, so the descriptor is conformer-specific. Charge change carries the measured effect at +0.170 pH units per charge unit, and over the eight scorable edges charge-change magnitude orders the shifts at +0.914 (p = 0.004) while substitution cost orders them in the predicted direction without reaching significance (Spearman rho -0.667, exact permutation p = 0.083). Every acidic-pocket carboxylate pair is intra-subunit across four assemblies spanning pH 5.7 to 8.5 while the cavity they line is completed by the neighbouring subunit. Holding position, charge change and side-chain volume fixed across 101 substitutions at 22 positions, ladder membership changes the activation shift by -0.035 pH units (permutation p = 0.437) and the steady-state desensitization shift by -0.001 units (p = 0.974). A sign test over charge-matched pairs at single positions does not separate them either (p = 0.110), and reaches nominal significance only when the indicator is widened past the twelve edges the method defines. Codon-level constraint therefore delivers charge bookkeeping with no detectable tolerance effect, and substitution costs derived from pathogenicity should not be quoted as predicting pH behaviour.
 
 Keywords: pH-responsive protein design, Substitution tolerance, Acid-sensing ion channel, Variant effect prediction, Codon-level constraint, Proton sensing
 
@@ -126,7 +126,7 @@ Tested on Python 3.10.
 
 If you use this code or dataset, please cite:
 
-> Karagöl T., Karagöl A. *Charge change predicts the effect of a pH-responsive protein design ladder in acid-sensing ion channel 1a.* (2026).
+> Karagöl T., Karagöl A. *Position and charge change predict measured pH50 shifts in a pI-code ladder test of acid-sensing ion channel 1a.* (2026).
 
 A BibTeX entry will be added upon publication of the journal record.
 
