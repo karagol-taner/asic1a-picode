@@ -28,6 +28,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyArrowPatch, Circle
+from matplotlib.transforms import Bbox
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import picode_paths as P
@@ -83,12 +84,106 @@ def read_ph50(path, col='d_act'):
 
 def save(fig, name):
     os.makedirs(FIGS, exist_ok=True)
+    place_panel_letters(fig)
     # No build date in the SVG, so a rebuild is byte-identical.
     for ext, kw in (('png', dict(dpi=400)),
                     ('svg', dict(metadata={'Date': None}))):
         fig.savefig(os.path.join(FIGS, '%s.%s' % (name, ext)), **kw)
     plt.close(fig)
     print('  wrote figures/%s.png and .svg' % name)
+
+
+def place_labels(ax, xs, ys, labels, fontsize=6, dy=7):
+    """Point labels nudged apart until no two overlap."""
+    fig = ax.figure
+    fig.canvas.draw()
+    rend = fig.canvas.get_renderer()
+    ts = [ax.annotate(l, (x, y), textcoords='offset points', xytext=(0, dy),
+                      ha='center', fontsize=fontsize, color=ACC)
+          for x, y, l in zip(xs, ys, labels)]
+    for _ in range(120):
+        fig.canvas.draw()
+        pts = [ax.transData.transform((x, y)) for x, y in zip(xs, ys)]
+        # A 2 px cushion, so labels separate instead of settling flush
+        # against one another.
+        boxes = [Bbox.from_extents(b.x0 - 2, b.y0 - 2, b.x1 + 2, b.y1 + 2)
+                 for b in (q.get_window_extent(rend) for q in ts)]
+        moved = False
+        for i in range(len(ts)):
+            for j in range(i + 1, len(ts)):
+                if not boxes[i].overlaps(boxes[j]):
+                    continue
+                ci = ((boxes[i].x0 + boxes[i].x1) / 2.0, (boxes[i].y0 + boxes[i].y1) / 2.0)
+                cj = ((boxes[j].x0 + boxes[j].x1) / 2.0, (boxes[j].y0 + boxes[j].y1) / 2.0)
+                vx, vy = ci[0] - cj[0], ci[1] - cj[1]
+                if vx == 0 and vy == 0:
+                    vx, vy = 1.0, 0.6
+                m = (vx * vx + vy * vy) ** 0.5
+                sx, sy = 1.4 * vx / m, 1.4 * vy / m
+                ox, oy = ts[i].xyann; ts[i].xyann = (ox + sx, oy + sy)
+                ox, oy = ts[j].xyann; ts[j].xyann = (ox - sx, oy - sy)
+                moved = True
+        # keep every label clear of every marker, not only its own
+        for k, q in enumerate(ts):
+            b = q.get_window_extent(rend)
+            for px, py in pts:
+                if b.x0 - 3 <= px <= b.x1 + 3 and b.y0 - 3 <= py <= b.y1 + 3:
+                    ox, oy = q.xyann; q.xyann = (ox, oy + 1.5)
+                    moved = True
+                    break
+        if not moved:
+            break
+    return ts
+
+
+def panel(ax, letter, stat=None, center=False):
+    # Queue the letter; save() places it once the layout pass has settled the
+    # axes positions. Placing it here would freeze a position that
+    # tight_layout then moves, which drops the letter onto panel content.
+    fig = ax.figure
+    if not hasattr(fig, 'panel_letters'):
+        fig.panel_letters = []
+    fig.panel_letters.append((ax, letter))
+    if stat:
+        ax.set_title(stat, loc='center' if center else 'right',
+                     fontsize=8 if center else 7, color=INK, pad=6)
+
+
+def place_panel_letters(fig):
+    # Outside the panel's own left edge, so the letter clears the axis label
+    # and the tick labels rather than starting inside the plot. The gridspec
+    # cell is checked as well because an equal aspect ratio shrinks the axes
+    # box and centres it inside its cell, which would carry the letter
+    # inwards with it.
+    letters = getattr(fig, 'panel_letters', ())
+    if not letters:
+        return
+    fig.canvas.draw()
+    rend = fig.canvas.get_renderer()
+    inv = fig.transFigure.inverted()
+    dy = 9.0 / 72.0 / fig.get_figheight()
+    placed = []
+    for ax, letter in letters:
+        spec = getattr(ax, 'get_subplotspec', lambda: None)()
+        box = ax.get_position()
+        tight = inv.transform_bbox(ax.get_tightbbox(rend))
+        left = min(tight.x0, box.x0)
+        col = None
+        if spec is not None:
+            cell = spec.get_position(fig)
+            left = min(left, cell.x0)
+            col = round(cell.x0, 3)
+        placed.append([letter, max(left, 0.006), box.y1 + dy, col])
+    # One left edge per column, so letters stack flush whether or not a given
+    # panel carries an axis label.
+    for c in {p[3] for p in placed if p[3] is not None}:
+        x = min(p[1] for p in placed if p[3] == c)
+        for p in placed:
+            if p[3] == c:
+                p[1] = x
+    for letter, x, y, _ in placed:
+        fig.text(x, y, letter, fontsize=9, fontweight='bold', color=INK,
+                 ha='left', va='bottom')
 
 
 # structures
@@ -144,10 +239,10 @@ def figure1(L):
         seen2[(r['wt_aa'], r['mut_aa'])] += 1
 
     fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.9))
-    tri = [('NAY triangle, third base U or C', ['D', 'H', 'N']),
-           ('NAR triangle, third base A or G', ['E', 'Q', 'K'])]
-    for ax, (title, res) in zip(axes, tri):
-        ax.set_title(title, fontsize=8, color=INK, pad=8)
+    tri = [('a', 'NAY triangle, third base U or C', ['D', 'H', 'N']),
+           ('b', 'NAR triangle, third base A or G', ['E', 'Q', 'K'])]
+    for ax, (tag, title, res) in zip(axes, tri):
+        panel(ax, tag, title, center=True)
         ang = {r: a for r, a in zip(res, [90, 210, 330])}
         pos = {r: (math.cos(math.radians(a)), math.sin(math.radians(a)))
                for r, a in ang.items()}
@@ -187,10 +282,6 @@ def figure1(L):
         ax.set_xlim(-1.62, 1.62); ax.set_ylim(-1.30, 1.42)
         ax.set_aspect('equal'); ax.axis('off')
     fig.subplots_adjust(bottom=0.06, top=0.90, wspace=0.02)
-    fig.text(0.5, 0.005,
-             'Solid blue, measured in the primary cohort. Asterisk, measured only in '
-             'the independent cohort. Dashed grey, no measured pH50 in either.',
-             ha='center', fontsize=6.5, color=ACC)
     save(fig, 'Figure1')
 
 
@@ -216,24 +307,18 @@ def figure2(L, costs):
     for ax, (x, xl, tag) in zip(axes, panels):
         ax.scatter(x, y, s=18 + 7 * n, facecolor=LAD, edgecolor=INK,
                    linewidth=0.5, alpha=0.9, zorder=3)
-        for xi, yi, p in zip(x, y, edges):
-            ax.annotate('%s>%s' % p, (xi, yi), textcoords='offset points',
-                        xytext=(0, 7), ha='center', fontsize=6, color=ACC)
         if len(x) > 2:
             b = np.polyfit(x, y, 1)
             xs = np.linspace(x.min(), x.max(), 50)
             ax.plot(xs, np.polyval(b, xs), color=GREY, lw=0.9, ls='--', zorder=1)
         rho = spearman(list(x), list(y))
         ax.set_xlabel(xl, fontsize=7)
-        ax.set_title('%s   rho = %+.3f' % (tag, rho), fontsize=7.5, loc='left')
+        panel(ax, tag, 'rho = %+.3f' % rho)
         ax.set_ylim(-0.05, max(y) * 1.32)
     axes[0].set_ylabel('mean |delta activation pH50|', fontsize=7)
-    fig.text(0.5, -0.06,
-             'Marker area scales with the number of measured substitutions carrying '
-             'the edge. Charge change (c) orders the measured shift better than '
-             'either cost (a, b).',
-             ha='center', fontsize=6.5, color=ACC)
     fig.tight_layout()
+    for ax, (x, _xl, _tag) in zip(axes, panels):
+        place_labels(ax, x, y, ['%s>%s' % p for p in edges])
     save(fig, 'Figure2')
 
 
@@ -298,9 +383,9 @@ def figure3(L):
     ax.set_yticks(yy)
     ax.set_yticklabels(['%s / %s' % (x[1], x[3]) for x in pairs], fontsize=5.4)
     ax.set_xlabel('|delta activation pH50|', fontsize=7)
-    ax.legend(frameon=False, fontsize=6.3, loc='lower right')
-    ax.set_title('a   %d charge-matched pairs at one position' % len(pairs),
-                 fontsize=7.5, loc='left')
+    ax.legend(frameon=False, fontsize=6.3, loc='upper center',
+              bbox_to_anchor=(0.5, -0.12), ncol=2)
+    panel(ax, 'a')
     ax.set_ylim(-1, len(pairs))
 
     ax = axes[1]
@@ -312,15 +397,7 @@ def figure3(L):
                 textcoords='offset points', xytext=(5, 0), fontsize=6.5, color=NON)
     ax.set_xlabel('ladder minus non-ladder, |delta pH50|', fontsize=7)
     ax.set_ylabel('pairs', fontsize=7)
-    ax.set_title('b   wins are smaller than losses', fontsize=7.5, loc='left')
-    fig.text(0.5, -0.03,
-             'The ladder substitution perturbs less in %d of %d pairs, winning by '
-             '%.3f pH on average and losing by %.3f. Neither the sign test nor the '
-             'magnitude separates them.'
-             % (int((d < 0).sum()), len(d),
-                float(np.mean([-x for x in d if x < 0])),
-                float(np.mean([x for x in d if x > 0]))),
-             ha='center', fontsize=6.5, color=ACC)
+    panel(ax, 'b')
     fig.tight_layout()
     save(fig, 'Figure3')
 
@@ -411,12 +488,7 @@ def figure4():
                 ax.scatter([q[0]], [q[1]], s=9, marker='x', color=LAD, lw=0.8,
                            zorder=5)
     ax.set_aspect('equal'); ax.axis('off')
-    ax.set_title('a   largest measured shift at each position', fontsize=7.4,
-                 loc='left')
-    ax.text(0.99, 0.02, 'one subunit drawn solid; blue crosses, the acidic pocket; '
-                        'colour and area scale with |delta pH50|',
-            transform=ax.transAxes, ha='right', fontsize=5.6, color=ACC)
-
+    panel(ax, 'a')
     # (b) burial against shift
     ax = axes[0, 1]
     ax.scatter(B, S, s=20, facecolor=LAD, edgecolor=INK, lw=0.4, zorder=3)
@@ -425,8 +497,7 @@ def figure4():
     ax.plot(xs, np.polyval(b, xs), color=GREY, lw=0.9, ls='--', zorder=1)
     ax.set_xlabel('relative solvent accessibility (%)', fontsize=7)
     ax.set_ylabel('largest |delta activation pH50|', fontsize=7)
-    ax.set_title('b   buried positions matter more   rho = %+.3f'
-                 % spearman(B, S), fontsize=7.4, loc='left')
+    panel(ax, 'b', 'rho = %+.3f' % spearman(B, S))
 
     # (c) distance to the pocket against shift
     ax = axes[1, 0]
@@ -436,8 +507,7 @@ def figure4():
     ax.plot(xs, np.polyval(b, xs), color=GREY, lw=0.9, ls='--', zorder=1)
     ax.set_xlabel('distance to the acidic pocket centre (A)', fontsize=7)
     ax.set_ylabel('largest |delta activation pH50|', fontsize=7)
-    ax.set_title('c   distance to the pocket   rho = %+.3f' % spearman(D, S),
-                 fontsize=7.4, loc='left')
+    panel(ax, 'c', 'rho = %+.3f' % spearman(D, S))
 
     # (d) by domain, as the source labels them
     ax = axes[1, 1]
@@ -466,8 +536,7 @@ def figure4():
                         .replace('Transmembrane', 'trans-\nmembrane')
                         for k in order], fontsize=6)
     ax.set_ylabel('mean |delta activation pH50|', fontsize=7)
-    ax.set_title('d   by domain, as the source labels them', fontsize=7.4,
-                 loc='left')
+    panel(ax, 'd')
     fig.tight_layout(h_pad=2.0, w_pad=1.8)
     save(fig, 'Figure4')
 
@@ -529,11 +598,7 @@ def figure5():
                     ax.scatter([q[0]], [q[1]], s=13, facecolor=NON,
                                edgecolor=INK, lw=0.35, zorder=4)
     ax.set_aspect('equal'); ax.axis('off')
-    ax.set_title('a   9E4F trimer at pH 5.7, down the three-fold axis',
-                 fontsize=7.4, loc='left')
-    ax.text(0.99, 0.02, 'red, the nine pocket carboxylates of all three subunits',
-            transform=ax.transAxes, ha='right', fontsize=6, color=ACC)
-
+    panel(ax, 'a')
     # (b) every pair is intra-subunit
     ax = axes[0, 1]
     labs, intra, inter = [], [], []
@@ -549,7 +614,8 @@ def figure5():
                     if d == d:
                         (ia if ca == cb else ie).append(d)
             if ia and ie:
-                labs.append('%s  %s' % (f.split('.')[0], PAIRNAME[i]))
+                labs.append('%s %s' % (f.split('.')[0],
+                                       PAIRNAME[i].split(' / ')[0 if sp == 'human' else 1]))
                 intra.append(min(ia)); inter.append(min(ie))
     y = np.arange(len(labs))
     for i in range(len(labs)):
@@ -566,8 +632,7 @@ def figure5():
     ax.set_xlabel('min carboxyl O to O (A, log scale)', fontsize=7)
     ax.legend(frameon=False, fontsize=6.2, loc='upper center',
               bbox_to_anchor=(0.5, -0.17), ncol=2)
-    ax.set_title('b   both members of every pair come from one subunit',
-                 fontsize=7.4, loc='left')
+    panel(ax, 'b')
 
     # (c) the palm pair belongs to the neighbouring subunit
     ax = axes[1, 0]
@@ -599,8 +664,7 @@ def figure5():
     ax.set_xlabel('min carboxyl O to O (A)', fontsize=7)
     ax.legend(frameon=False, fontsize=6.2, loc='upper center',
               bbox_to_anchor=(0.5, -0.17), ncol=2)
-    ax.set_title('c   the palm pair completes the pocket of the NEXT subunit',
-                 fontsize=7.4, loc='left')
+    panel(ax, 'c')
 
     # (d) collapse on acidification
     ax = axes[1, 1]
@@ -624,7 +688,7 @@ def figure5():
     ax.set_xlabel('structure pH', fontsize=7)
     ax.set_ylabel('min carboxyl O to O (A)', fontsize=7)
     ax.legend(frameon=False, fontsize=6.2, loc='upper left')
-    ax.set_title('d   the pocket collapses on acidification', fontsize=7.4, loc='left')
+    panel(ax, 'd')
 
     fig.tight_layout(h_pad=3.0, w_pad=1.8)
     save(fig, 'Figure5')
@@ -656,7 +720,7 @@ def figure6():
     ax.set_xticks(xs); ax.set_xticklabels([names[r] for r in order], fontsize=6.5)
     ax.set_ylabel('predicted pKa minus model value', fontsize=7)
     ax.legend(frameon=False, fontsize=6.3)
-    ax.set_title('a   pocket pKa is a property of the state', fontsize=7.5, loc='left')
+    panel(ax, 'a')
 
     ax = axes[1]
     det = parse_pka_determinants(need(pka))
@@ -674,11 +738,7 @@ def figure6():
             edgecolor=INK, lw=0.6)
     ax.set_yticks(range(len(top))); ax.set_yticklabels(lbl, fontsize=6.5)
     ax.set_xlabel('summed |contribution| to pocket pKa', fontsize=7)
-    ax.set_title('b   the second shell', fontsize=7.5, loc='left')
-    fig.text(0.5, -0.05,
-             'The top second-shell position is an arginine, reachable only through '
-             'the two arginine edges whose place in the method is unresolved.',
-             ha='center', fontsize=6.5, color=ACC)
+    panel(ax, 'b')
     fig.tight_layout()
     save(fig, 'Figure6')
 
@@ -780,8 +840,6 @@ def figureS1():
     ax.set_title('rho = %+.3f   %d of %d move the same way'
                  % (spearman(list(X), list(Y)), same, nz), fontsize=7.5,
                  loc='left')
-    ax.text(0.98, 0.03, 'shaded, the two readouts agree in sign',
-            transform=ax.transAxes, ha='right', fontsize=6, color=ACC)
     fig.tight_layout()
     save(fig, 'FigureS1')
 
